@@ -9,7 +9,24 @@
     <p>Op deze pagina kunt u een kamer in ons hotel boeken en nog een aantal foto's en een filmpje bekijken.</p>
 </header>
 <section>
+<form method="post">
     <h2>Adresgegevens</h2>
+    <label>Naam:</label>
+    <input type="text" name="naam" required><br><br>
+    <label>Adres:</label>
+    <input type="text" name="adres" required><br><br>
+    <label>Postcode:</label>
+    <input type="text" name="postcode" pattern="[0-9]{4}\s?[a-zA-Z]{2}$" title="Een postcode bestaat uit 4 cijfers en 2 letters." placeholder="1111 AA" required><br><br>
+    <label>Woonplaats:</label>
+    <input type="text" name="woonplaats" required><br><br>
+    <label>Telefoonnummer:</label>
+    <input type="tel" name="telefoonnummer" required><br><br>
+    <label>E-mailadres:</label>
+    <input type="email" name="email" placeholder="voorbeeld@spanjeweb.nl">
+    <h2>Reservering</h2>
+
+    <button type="submit">Reserveer</button>
+</form>
 </section>
 <body>
     

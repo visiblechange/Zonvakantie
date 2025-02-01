@@ -10,6 +10,7 @@
         Spanje kent dan ook veel accomodaties waar u kunt verblijven. Op deze site laten we dit schitterende land en ons mooie hotel zien.
     </p>
     <p>Wij hopen u snel te mogen verwelkomen in ons hotel.</p>
+    <a href="images/hotel4.jpg"><img src="images/hotel4.jpg" alt="Exterieur van het hotel" width="300"></a>
 </header>
 <body>
     <main>
@@ -39,13 +40,17 @@
         <section>
             <p>Wilt u meer informatie over ons hotel? Neem dan contact met ons op via onderstaande gegevens.</p>
             <p>Ons telefoonnummer is <a href="tel:0031612345678">+31612345678</a></p>
-            <p>U kunt hier meer foto's van de omgeving en de accomodatie zien.</p>
+            <p>U kunt <a href="boeking.html#Foto">hier</a> meer foto's van de omgeving en de accomodatie zien.</p>
         </section>
         <section>
             <h2>Boeken</h2>
             <p>Wilt u ons hotel boeken? Gebruik dan onderstaande button.</p>
-            <form action="boeking.html">
-                <button type="submit">Boeken</button>
+            <script>
+                function visitPage(){
+                    window.location='boeking.html';
+                }
+            </script>
+            <button onclick="visitPage();">Boeken</button>
         </section>
     </main>  
 </body>

@@ -9,7 +9,7 @@
     <p>Op deze pagina kunt u een kamer in ons hotel boeken en nog een aantal foto's en een filmpje bekijken.</p>
 </header>
 <section>
-<form method="post">
+<form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post">
     <h2>Adresgegevens</h2>
     <label>Naam:</label>
     <input type="text" name="naam" required><br><br>
@@ -24,9 +24,44 @@
     <label>E-mailadres:</label>
     <input type="email" name="email" placeholder="voorbeeld@spanjeweb.nl">
     <h2>Reservering</h2>
+    <label>Aantal personen:</label>
+    <input type="number" name="aantal_personen" min="1" max="10" required><br><br>
+    <label>Aankomstdatum</label>
+    <input type="date" name="aankomstdatum" required><br><br>
+    <label>Verblijfsduur:</label>
+    <input type="number" name="verblijfsduur" min="2" max="20" step="2" required> dagen<br><br>
+    <label for="verzorging">Verzorging:
+    <select id="verzorging" name="verzorging" required>
+        <option value="logies">Logies</option>
+        <option value="halfpension">Halfpension</option>
+        <option value="volpension">Volpension</option></select></label><br><br>
+    <label>Annuleringsverzekering:</label>
+    <input type="radio" name="annuleringsverzekering" value="ja" required>ja
+    <input type="radio" name="annuleringsverzekering" value="nee" required>nee<br><br>
+    <label>Opmerkingen:</label>
+    <textarea name="opmerkingen" rows="4" cols="40"></textarea><br><br>
 
     <button type="submit">Reserveer</button>
 </form>
+</section>
+<section>
+    <h2>Foto's</h2>
+    <figure><img src="images/hotel1.jpeg" alt="Buffet" width="300">
+        <figcaption>Lopend buffet</figcaption>
+    <img src="images/hotel2.jpg" alt="Hotelkamer" width="300">
+    <figcaption>Eén van de bedden</figcaption>
+    <img src="images/hotel3.jpg" alt="Eetgelegenheid" width="300">
+    <figcaption>Een lokale eetgelegenheid</figcaption>
+    <img src="images/hotel4.jpg" alt="Exterieur van het hotel" width="300">
+    <figcaption>De buitenkant van het hotel</figcaption></figure> 
+</section>
+<section>
+    <h2 id="Foto">Filmpje</h2>
+    <p>Een kort inspiratiefilmpje van de mooie omgeving.</p>
+    <video width="400" controls>
+        <source src="video/hotel.mp4" type="video/mp4">
+        Uw browser ondersteunt dit videoformaat niet.
+    </video>
 </section>
 <body>
     
